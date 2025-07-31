@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="https://c-cdnet.cdn.smule.com/rs-s24/arr/36/e1/eab2215f-1127-4737-b906-22c15be8a742.jpg">
+
+
+ <style>
+ body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/736x/f8/09/63/f80963686fc535c53bfcc92b05169103.jpg');
+    background-size:contain;
+
+}
+ audio {
+  display: none
+ } 
+ .vinyl {
+        position: fixed;
+        bottom:-21ic;
+        left: -22% ;
+        animation: spin 5s linear infinite;
+        box-sizing:content-box;
+    }
+
+    .vinyl_spinning {
+        transform: rotate(360);
+        animation-iteration-count: infinite;
+        }
+
+ 
+  @keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  }
+
+  .middle-block {
+  width: 800px;
+  padding: 50px;
+  padding-bottom: 100px;
+  padding-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(0, 0, 0);
+}
+h1 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 6rem;
+  background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.rainbow {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #01AAC7, #2DB0B2, #9CC68A, #DED104, #EA666A, #E2508F);
+  outline: 20px white;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2 {
+  color: #f48fb1;
+}
+    </style>
+</head>
+<body>
+<div class="middle-block" style="text-align: center;">
+  <p><h1>WOW ODD FUTURE!</p>
+    <h2>This page is just about Odd Future and its awesome and amazing. Nah this lowkey might be a testing page. Wondering why it looks so bad? its supposed to look bad but who knows might be updated. BUT <div class="rainbow">OFWGKTADGAFLLBBLSBFBN</div> </h2>
+</div>
+  <audio id="bgAudio" controls>
+  <source src="Odd Future - _Oldie_ 0.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio>
+
+  <div class="vinyl rotate rotation imagevinyl">
+  <img id="vinyl" src="https://i.ibb.co/4g5wrGB0/upscaled-8x-R-5583335-1397224668-6076-removebg-preview.png" alt="Spinning Vinyl" />
+  </div>
+
+  <script>
+  document.getElementById('vinyl').addEventListener('click', function() {
+    const audio = document.getElementById('bgAudio');
+    const vinylImage = document.getElementById('vinyl');
+
+    if (audio.paused) {
+        audio.play();
+        vinylImage.classList.add('vinyl_spinning');
+    } else {
+        audio.pause();
+        vinylImage.classList.remove('vinyl_spinning');
+    }
+  });
+  </script>
+
+</body>
+</html>

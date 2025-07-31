@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biking With Felica</title>
+    <link rel="icon" type="image/x-icon" href="https://i.ibb.co/N6X9BnX1/BWF-Records.png">
+
+  <style>
+    
+    /* This contains the banner and banner text within the banner*/
+     /* vIMPORTANT COPY AND PASTE INTO EVERY PAGEv*/
+    .banner-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .banner-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: blur(10px);
+      transform: scale(1.05);
+      display: block;
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      z-index: 1;
+      pointer-events: none;
+      white-space: nowrap; 
+    }
+   /* The Vinyl spinning motion postion: fixed keeps it in the corner and such with the bottom and left
+   the linear infinite helps make it rotate infinite with the animation iternation count.*/
+    .vinyl {
+        position: fixed;
+        bottom:-21ic;
+        left: -22% ;
+         animation: spin 5s linear infinite;
+         
+    }
+    .vinyl_spinning {
+        transform: rotate(360);
+        animation-iteration-count: infinite;
+        }
+
+  
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
+.imagevinyl:hover img {
+  opacity: 0.5;
+}
+
+audio {
+  display: none
+}
+
+.yeah {
+  float: right;
+}
+
+  </style>
+  <link rel="stylesheet" href="COMEON copy.css">
+ 
+
+</head>
+<body>
+   <!-- Dropdown Menu which sends you to other sections of the site. -->
+  <nav>
+  <ul class="navbar">
+    <li><a href="Biking With Felica.html">Home</a></li>
+    <li><a href="About Me.html">About Me</a></li>
+    <li class="dropdown-parent">
+      <a href="#">Vinyls</a>
+      <ul class="dropdown">
+        <li><a href="Genres.html">Genres</a></li>
+        <li><a href="New Releases.html">New Releases</a></li>
+        <li><a href="Featured.Html">Featured</a></li>
+        <li><a href="Vinyl Of The Day.html">Vinyl Of The Day</a></li>
+      </ul>
+    </li>
+    <li class="signup-button yeah">
+      <a class="uhdothesignup" href="#">Sign Up/Log In</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+     <!-- Photo of the Vinyl and stuff. -->
+  <audio id="bgAudio" controls>
+    <source src="https://www.dropbox.com/scl/fi/0dduaeig3zxuqfevjeknn/Indecision-Daniel-Caesar.mp3?rlkey=9emtb2fg3491wpys6gutf09v9&st=99atdqok&raw=1" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="vinyl rotate rotation imagevinyl">
+  <img id="vinyl" src="https://i.ibb.co/1tFJXLh2/upscaled-4x-View-sidea-State-empty-f1b961af-5da7-455d-a31a-e367d377d53c-1946x-removebg-preview-1-mod.png" alt="Spinning Vinyl" />
+</div>
+
+  <script>
+  document.getElementById('vinyl').addEventListener('click', function() {
+      const audio = document.getElementById('bgAudio');
+      audio.play();
+  });
+  </script>
+    
+</body>
+</html>

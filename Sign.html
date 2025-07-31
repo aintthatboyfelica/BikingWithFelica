@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+        <link rel="icon" type="image/x-icon" href="https://i.ibb.co/N6X9BnX1/BWF-Records.png">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="COMEON copy.css">
+<style>
+    .vinyl {
+        position: fixed;
+        bottom: 10ic;
+        left: -22% ;
+         animation: spin 5s linear infinite;
+         box-sizing:content-box;
+    }
+
+    .vinyl_spinning {
+        transform: rotate(360);
+        animation-iteration-count: infinite;
+        }
+
+ 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} 
+.imagevinyl:hover img {
+  opacity: 0.5;
+  
+}
+
+audio {
+  display: none
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.yeah {
+  margin-left: auto;
+}
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: left; /* or space-between/space-around */
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.navbar li a {
+  color: white; /* or any other color */
+  text-decoration: none;
+}
+
+/* Optional: Center the login container */
+.glass-container {
+  display: flex;
+  justify-content:right;
+  align-items: center;
+}
+</style>
+</head>
+<body>
+ <nav>
+  <ul class="navbar">
+    <li><a href="Biking With Felica.html">Home</a></li>
+    <li><a href="About Me.html">About Me</a></li>
+    <li class="dropdown-parent">
+      <a href="#">Vinyls</a>
+      <ul class="dropdown">
+        <li><a href="Genres.html">Genres</a></li>
+        <li><a href="New Releases.html">New Releases</a></li>
+        <li><a href="Featured.Html">Featured</a></li>
+        <li><a href="Vinyl Of The Day.html">Vinyl Of The Day</a></li>
+      </ul>
+    </li>
+    <li class="signup yeah">
+      <a class="uhdothesignup" href="Sign.html">Sign Up/Log In</a>
+    </li>
+  </ul>
+</nav>
+
+    <div class="glass-container">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+
+                <input type="text" id="username" name="username" required placeholder="Username">
+                
+                <input type="password" id="password" name="password" required placeholder="Password">
+                
+                <div class="options">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                
+                <button type="submit">Login</button>
+
+                <p>Don't have an account? <a href="#" id="register">Register</a></p>
+            </form>
+        </div>
+    </div>
+<a href="https://youtu.be/Jh40uRabHcI?si=ro2g6aDHALsxFjDS"><button>LINK TO TUTORIAL</button></a>
+    <audio id="bgAudio" controls>
+  <source src="https://www.dropbox.com/scl/fi/0dduaeig3zxuqfevjeknn/Indecision-Daniel-Caesar.mp3?rlkey=9emtb2fg3491wpys6gutf09v9&st=99atdqok&raw=1" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<!--V*AI ASSISTED*V-->
+
+<div class="vinyl rotate rotation imagevinyl" style="position: fixed; bottom: -21ic; left: -22%; z-index: 9999; pointer-events: auto;">
+  <img id="vinyl" src="https://i.ibb.co/1tFJXLh2/upscaled-4x-View-sidea-State-empty-f1b961af-5da7-455d-a31a-e367d377d53c-1946x-removebg-preview-1-mod.png" alt="Spinning Vinyl" />
+</div>
+<!--*AI ASSISTED*-->
+
+<script>
+document.getElementById('vinyl').addEventListener('click', function() {
+    const audio = document.getElementById('bgAudio');
+    const vinylImage = document.getElementById('vinyl');
+
+    if (audio.paused) {
+        audio.play();
+        vinylImage.classList.add('vinyl_spinning');
+    } else {
+        audio.pause();
+        vinylImage.classList.remove('vinyl_spinning');
+    }
+});
+</script>
+</body>
+</html>
